@@ -1,7 +1,7 @@
 <?
 function check($number)
 {
-$result="Unknown";
+    $result = "Unknown";
     if ($number >= 0 AND $number < 10000 AND is_numeric($number)) {
         $result = "";
 
@@ -51,7 +51,8 @@ $result="Unknown";
 
         $ten = floor($number / 10);
         $number = $number % 10;
-        if ($ten == 1) {
+        $units = $number;
+        if ($ten == 1 AND $units == 0) {
             $result .= "Ⰺ";
         } else if ($ten == 2) {
             $result .= "Ⰻ";
@@ -71,28 +72,51 @@ $result="Unknown";
             $result .= "Ⱂ";
         }
 
-        $units = $number;
-        if ($units == 1) {
-            $result .= "Ⰰ";
-        } else if ($units == 2) {
-            $result .= "Ⰱ";
-        } else if ($units == 3) {
-            $result .= "Ⰲ";
-        } else if ($units == 4) {
-            $result .= "Ⰳ";
-        } else if ($units == 5) {
-            $result .= "Ⰴ";
-        } else if ($units == 6) {
-            $result .= "Ⰵ";
-        } else if ($units == 7) {
-            $result .= "Ⰶ";
-        } else if ($units == 8) {
-            $result .= "Ⰷ";
-        } else if ($units == 9) {
-            $result .= "Ⰸ";
+
+        if ($ten == 1 AND $units > 0) {
+            if ($units == 1) {
+                $result .= "ⰀⰊ";
+            } else if ($units == 2) {
+                $result .= "ⰁⰊ";
+            } else if ($units == 3) {
+                $result .= "ⰂⰊ";
+            } else if ($units == 4) {
+                $result .= "ⰃⰊ";
+            } else if ($units == 5) {
+                $result .= "ⰄⰊ";
+            } else if ($units == 6) {
+                $result .= "ⰅⰊ";
+            } else if ($units == 7) {
+                $result .= "ⰆⰊ";
+            } else if ($units == 8) {
+                $result .= "ⰇⰊ";
+            } else if ($units == 9) {
+                $result .= "ⰈⰊ";
+            }
+        } else {
+            if ($units == 1) {
+                $result .= "Ⰰ";
+            } else if ($units == 2) {
+                $result .= "Ⰱ";
+            } else if ($units == 3) {
+                $result .= "Ⰲ";
+            } else if ($units == 4) {
+                $result .= "Ⰳ";
+            } else if ($units == 5) {
+                $result .= "Ⰴ";
+            } else if ($units == 6) {
+                $result .= "Ⰵ";
+            } else if ($units == 7) {
+                $result .= "Ⰶ";
+            } else if ($units == 8) {
+                $result .= "Ⰷ";
+            } else if ($units == 9) {
+                $result .= "Ⰸ";
+            }
         }
 
     }
     return $result;
 }
+
 ?>
