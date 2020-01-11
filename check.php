@@ -116,6 +116,9 @@ function check($number)
         }
 
     }
+    if ($number == 0) {
+        $result = "०";
+    }
     return $result;
 }
 

@@ -46,7 +46,7 @@ if (isset($_POST['check']) AND ($_POST['check'] == 'Check')) {
                     <div class="panel-body">
                         <form action="" method="POST">
                             <fieldset>
-                                <p>From 1 to 9999 only!</p>
+                                <p>From 0 to 9999 only!</p>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Number" name="arabic" type="number" max="9999">
                                 </div>
