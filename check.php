@@ -2,7 +2,10 @@
 function check($number)
 {
     $result = "Unknown";
-    if ($number >= 0 AND $number < 10000 AND is_numeric($number)) {
+    if ($number == 0) {
+        $result = "०";
+    }
+    if ($number > 0 AND $number < 10000 AND is_numeric($number)) {
         $result = "";
 
         $thousand = floor($number / 1000);
@@ -114,11 +117,8 @@ function check($number)
                 $result .= "Ⰸ";
             }
         }
+    }
 
-    }
-    if ($number == 0) {
-        $result = "०";
-    }
     return $result;
 }
 

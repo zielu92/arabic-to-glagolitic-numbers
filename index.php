@@ -59,7 +59,7 @@ if (isset($_POST['check']) AND ($_POST['check'] == 'Check')) {
                                 <? } ?>
                             </fieldset>
                         </form>
-                        <p class="text-center"><a href="https://mzielinski.pl">mzielinski.pl</a></p>
+                        <p class="text-center">© <? echo(date("Y")); ?> <a href="https://mzielinski.pl">mzielinski.pl</a></p>
                     </div>
                 </div>
             </div>
